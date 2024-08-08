@@ -10,6 +10,14 @@
       }
     },
     {
+      "pathname": "/cats",
+      "select": {
+        "body": {
+          "class": "cats"
+        }
+      }
+    },
+    {
       "urlRegExp": "/stories/",
       "select": {
         "body": {
