@@ -235,3 +235,7 @@ main picture[style*="--aspect-ratio"] img {
 .story main {
     max-width: 1000px;
 }
+
+.cats main {
+    max-width: 600px;
+}
