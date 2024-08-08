@@ -1,0 +1,36 @@
+web-stories {
+    display: block;
+    background-color: var(--gray-90);
+}
+
+web-stories::part(wrapper) {
+    padding: var(--size-800) var(--size-400);
+    max-width: var(--layout-width);
+    margin: auto;
+    text-align: center;
+}
+
+web-stories [doc2-source] {
+    display: flex;
+    gap: var(--size-200);
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+web-stories a {
+    background-color: var(--gray-100);
+    border-radius: var(--size-100);
+    width: calc(var(--layout-width) / 3 - var(--size-400));
+    overflow: hidden;
+}
+
+web-stories img {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+}
+
+web-stories h3 {
+    padding: var(--size-400);
+    margin: 0;
+}

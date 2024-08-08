@@ -1,0 +1,34 @@
+web-announcement {
+    display: block;
+    background-color: var(--gray-10);
+}
+
+web-announcement::part(wrapper) {
+    max-width: calc(var(--layout-width) / 1.5);
+    margin: auto;
+    padding: var(--size-400);
+    text-align: center;
+}
+
+web-announcement h2 {
+    margin-top: 0;
+    margin-bottom: var(--size-300);
+    color: var(--gray-100);
+    font-size: var(--font-size-xl);
+}
+
+web-announcement p {
+    margin-top: 0;
+    margin-bottom: var(--size-200);
+    color: var(--gray-100);
+    line-height: 2rem;
+    font-size: var(--font-size-m);
+}
+
+web-announcement a {
+    color: var(--dark-link);
+}
+
+web-announcement a:hover {
+    color: var(--dark-link-hover);
+}

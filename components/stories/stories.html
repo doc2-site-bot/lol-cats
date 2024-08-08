@@ -1,0 +1,18 @@
+<template shadowrootmode="open">
+    <div part="wrapper">
+        <slot></slot>
+    </div>
+</template>
+
+<template
+        doc2-source="https://api.doc2.site/v1/docs/search/SPACE/1n98BBrnbQW3Dzgq0Go6tyJOgk2l95Ee_"
+        doc2-template-engine="mustache"
+        doc2-method="POST"
+        doc2-body="engine=JMESPath&query=reverse(sort_by([?starts_with(path, '/stories')], %26publishedAt)[*].{path: path, title: meta.title, publishedAt: publishedAt, thumbnail: meta.thumbnail})">
+    {{#data}}
+    <a href="{{path}}">
+        <img src="{{thumbnail}}" loading="lazy" alt="{{title}}"/>
+        <h3>{{title}}</h3>
+    </a>
+    {{/data}}
+</template>

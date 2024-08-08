@@ -1,0 +1,52 @@
+{
+  "subdomain": "demo",
+  "ssr": [
+    {
+      "pathname": "/",
+      "select": {
+        "body": {
+          "class": "landing"
+        }
+      }
+    },
+    {
+      "urlRegExp": "/stories/",
+      "select": {
+        "body": {
+          "class": "story"
+        },
+        "html:has(meta[name='user-agent'][content*='Firefox']) web-blog": {
+          "class": "no-toc"
+        }
+      }
+    },
+    {
+      "select": {
+        "header img": {
+          "loading": "eager"
+        },
+        "header > p": {
+          "tagName": "a",
+          "href": "/"
+        }
+      },
+      "selectAll": {
+        "script[src*='columns'], script[src*='stories'], script[src*='contact'], script[src*='youtube']": {
+          "tagName": "template"
+        },
+        "web-columns-item > h2": {
+          "slot": "heading"
+        },
+        "web-columns-item > p": {
+          "slot": "text"
+        },
+        "web-columns-item > p:has(picture)": {
+          "slot": "illustration"
+        },
+        "web-columns-item > p:has(a)": {
+          "slot": "action"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+web-columns {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--gray-90);
+}

@@ -1,0 +1,45 @@
+<template shadowrootmode="open">
+    <!-- Shadow DOM styles -->
+    <link rel="stylesheet" href="/components/contact/form.css">
+
+    <div part="wrapper">
+        <slot></slot>
+
+        <form part="form">
+            <div>
+                <input type="hidden" name="date">
+
+                <label>
+                    <span>Name</span>
+                    <input type="text" name="name">
+                </label>
+
+                <label>
+                    <span>Submission</span>
+                    <textarea name="submission"></textarea>
+                </label>
+
+                <slot name="turnstile"></slot>
+
+                <button>Submit</button>
+            </div>
+            <div hidden>Thank you for submitting your story !</div>
+        </form>
+
+        <slot name="example"></slot>
+    </div>
+</template>
+
+<template
+        doc2-source="https://api.doc2.site/v1/spreadsheets/search/SPACE/1n98BBrnbQW3Dzgq0Go6tyJOgk2l95Ee_/1Ji5XuASqyWfqSSmJM0KGxsvJ1HGphNMpuJl26zzmZ4U/0"
+        doc2-template-engine="mustache"
+        doc2-method="POST"
+        doc2-body='engine=JMESPath&query=rows[-1:]'
+        slot="example">
+    {{#data}}
+        <strong>Latest submission by {{name}}</strong>
+        <p>{{submission}}</p>
+    {{/data}}
+</template>
+
+<div slot="turnstile" class="cf-turnstile" data-sitekey="0x4AAAAAAAEhZ_W5F6wAHa1_" data-theme="light"></div>

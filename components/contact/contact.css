@@ -1,0 +1,16 @@
+web-contact {
+    display: block;
+    background-color: var(--gray-90);
+}
+
+web-contact::part(wrapper) {
+    padding: var(--size-800) var(--size-400);
+    max-width: calc(var(--layout-width) / 1.5);
+    margin: auto;
+}
+
+@media (max-width: 700px) {
+    web-contact iframe {
+        width: 100% !important;
+    }
+}

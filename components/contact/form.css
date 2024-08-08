@@ -1,0 +1,95 @@
+form {
+    display: flex;
+    gap: var(--size-400);
+    background-color: var(--gray-100);
+    border-radius: var(--size-100);
+    padding: var(--size-400);
+    margin-bottom: var(--size-400);
+    flex-direction: column;
+}
+
+@media (min-width: 700px) {
+    form {
+        flex-direction: row;
+    }
+}
+
+form div:first-child {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-200);
+    width: 100%;
+}
+
+@media (min-width: 700px) {
+    form div:first-child {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        gap: var(--size-200);
+    }
+}
+
+form div:last-of-type {
+    font-weight: bold;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+form div:last-of-type[hidden] {
+    display: none;
+}
+
+form label {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-100);
+}
+
+form label span {
+    display: block;
+    font-style: italic;
+    font-size: var(--font-size-xs);
+    text-transform: capitalize;
+}
+
+form label input,
+form label textarea {
+    font-family: var(--font-family);
+    font-size: var(--font-size-xs);
+    padding: var(--size-100);
+    border-radius: var(--size-100);
+    border: var(--size-25) solid var(--gray-70);
+}
+
+form label textarea {
+    height: var(--size-1200);
+}
+
+form label input:hover {
+    border-color: var(--gray-30);
+}
+
+form button {
+    margin-top: var(--size-400);
+    align-self: flex-start;
+    font-family: var(--font-family);
+    font-size: var(--font-size-xs);
+    line-height: var(--size-300);
+    cursor: pointer;
+    color: var(--gray-10);
+    padding: var(--size-100);
+    border-radius: var(--size-100);
+    border: var(--size-25) solid var(--gray-0);
+    background-color: transparent;
+    font-weight: bold;
+}
+
+form button:hover {
+    background-color: var(--gray-80);
+}
+
+form button[disabled] {
+    opacity: .5;
+    pointer-events: none;
+}
